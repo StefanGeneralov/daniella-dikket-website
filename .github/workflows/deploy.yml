@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./daniella-dikket 2/
-          server-dir: ./public_html/daniella-dikket/
+          server-dir: ./httpdocs/daniella-dikket/
