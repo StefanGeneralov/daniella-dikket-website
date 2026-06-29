@@ -1,0 +1,251 @@
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+
+.fade-in-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ========================================
+   PAGE TRANSITIONS
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth page fade on load */
+body {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Smooth transitions between sections */
+section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ========================================
+   BUTTON ANIMATIONS
+   ======================================== */
+
+.contact-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.contact-button:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+   HOVER ANIMATIONS
+   ======================================== */
+
+.gallery-item {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.gallery-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.gallery-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.gallery-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* Reference cards stagger animation */
+.reference-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.reference-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.reference-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.reference-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Logo items stagger animation */
+.logo-item {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.logo-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.logo-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.logo-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.logo-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.logo-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* ========================================
+   INTERACTION ANIMATIONS
+   ======================================== */
+
+.reference-card {
+    transition: all 0.3s ease;
+}
+
+.reference-card:hover {
+    box-shadow: 0 20px 40px rgba(255, 0, 157, 0.2);
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    animation: shimmer 2s infinite;
+}
+
+/* ========================================
+   TRANSITION HELPERS
+   ======================================== */
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button,
+a,
+input,
+textarea {
+    transition: all 0.3s ease;
+}
